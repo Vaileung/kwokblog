@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+{#    <link rel="stylesheet" href="//cdn.jsdelivr.net/editor/0.1.0/editor.css">#}
+{#<script src="//cdn.jsdelivr.net/editor/0.1.0/editor.js"></script>#}
+{#<script src="//cdn.jsdelivr.net/editor/0.1.0/marked.js"></script>#}
+
+{#  <div class="publish center-block">#}
+{#    <form  action="" method="post" >{% csrf_token %}#}
+{##}
+{#      <div style="margin-left:100px" >{{ form.title }}</div>#}
+{##}
+{#      <div style="margin-top: 15px; margin-left: 100px">{{ form.content }}</div>#}
+{#        <div style="margin-left: 100px">{{ form.category }}</div>#}
+{#        <label style="margin-left: 100px; margin-top: -20px">#}
+{#        <input type="checkbox" name="status" value="p"> Remember me#}
+{#        </label>#}
+{#      <div style="margin-left: 100px"><button type="submit" class="btn btn-primary">发 布</button></div>#}
+{#    </form>#}
+{#  </div>#}
+
+{#<script type="text/javascript">#}
+{#  var editor = new Editor();#}
+{#  editor.render();#}
+{##}
+{#</script>#}
+<body>
+<div class="container ">
+    <div class="row">
+        <div class="col-lg-9 at-edit">
+            <form action="" method="post">{% csrf_token %}
+                <div class="edit-title">
+                    {{ form.title }}</div>
+                <div class="edit-abstract">
+                    {{ form.abstract }}</div>
+                <div class="edit-content" style="width: 848px">
+                    {{ form.content }}
+                </div>
+                    <div class="form-group " id="tag-info">
+                        {{ form.tags }}
+                    </div>
+                <div class="edit-category">
+                    {{ form.category }}</div>
+                <label class="checkbox">
+                 <input type="hidden" name="status" value="p">
+                </label>
+                <button type="submit"  class="btn btn-primary">发布</button>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+{% endblock %}
+

@@ -1,0 +1,53 @@
+<nav  aria-label="Page navigation">
+  <ul class="pager">
+    <li>
+        {% if current_page != first_page %}
+            <a href="?page={{ first_page }}">&#171</a>
+        {% endif %}
+    </li>
+
+
+    <li>
+    {% if article_list.has_previous %}
+        <a href="?page={{ article_list.previous_page_number }}" aria-label="Previous">
+        <span aria-hidden="true">&#139</span>
+        </a>
+    {% endif %}
+    </li>
+
+    {% if first_page == current_page %}
+     <li><a href="?page=1">1</a></li>
+    {% endif %}
+
+    <li>
+    {% for page in pages %}
+    {% if page == current_page %}
+        <span aria-hidden="true">{{ page }}</span>
+    {% else %}
+        <a href="?page={{ page }}">{{ page }}</a>
+    {% endif %}
+    {% endfor %}
+    </li>
+
+    <li>
+    {% if article_list.has_next %}
+      <a  href="?page={{ article_list.next_page_number }}" aria-label="Next">
+        <span aria-hidden="true">&#155</span>
+      </a>
+    {% endif %}
+    </li>
+
+    <li>
+    {% if last_page != 1 %}
+    {% if last_page == current_page %}
+        <span aria-hidden="true">{{ last_page }}</span>
+    {% else %}
+        <a href="?page={{ last_page }}">&#187</a>
+    {% endif %}
+    {% endif %}
+    </li>
+
+  </ul>
+</nav>
+
+

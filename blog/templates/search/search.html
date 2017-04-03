@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load highlight %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-9">
+            {% if query %}
+                <h3 class="well">搜索结果:</h3>
+                {% load paginate_tags %}
+                {% paginate article_list 10 %}
+                {% for result in page.object_list %}
+                    <div class="post">
+                        <div class="re-title">
+                            <a  href="{% url 'blog:detail' result.object.id %}">{{ result.object.title }}</a>
+                        </div>
+                        <div class="post-content">
+                            {% highlight result.object.body with query css_class "search-highlight" max_length 200 %}
+                        </div>
+                    </div>
+                {% empty %}
+                    <p class="well">非常抱歉,没找到相关内容^_^</p>
+                {% endfor %}
+                {% include 'pagination.html' %}
+            {% else %}
+                 <p class="well">请输入你所需要的关键词*_*</p>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}

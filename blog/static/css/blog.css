@@ -1,0 +1,224 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    line-height: 1;
+    background-image: url('../images/backimg.jpg');
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font: 12px 'Microsoft Yahei', '微软雅黑', 'simsun', Arial, sans-self;
+    min-width: 960px;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.main {
+    float: right;
+    overflow-x: hidden;
+    width: 100%;
+    margin-left: 100px;
+
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none
+}
+
+#nav-cat{
+    padding-left: 100px;
+    margin-top: -5px;
+}
+
+#detail-back{
+    background-image: url('../images/detailback.jpg')
+}
+
+.post{
+    background-color: #fff;
+    padding: 10px 5px 10px 10px;
+    margin-bottom: 10px;
+    position: relative;
+    clear: both;
+    border-radius: 8px;
+}
+
+#post-main{
+    /*padding-left: 100px;*/
+}
+
+.post-title{
+    margin: -15px 11px 10px 2px;
+    line-height: 10px;
+    font-size: 10px;
+    color: inherit;
+    padding: 1px 0 1px 0;
+}
+
+.post-meta{
+    font-size: 8px;
+    display: block;
+    font-family: Merriweather, 冬青黑体简体中文, "Microsoft YaHei", 微软雅黑, SimSun, 宋体, Heiti, 黑体, droid_sansregular, arial, serif;
+    margin: -5px  5px;
+    overflow: hidden;
+}
+
+.pub-date{
+    margin: 0;
+    font-size: 2em;
+    line-height: 1.4;
+}
+
+.categories{
+    margin: 0;
+    font-size: 2em;
+    line-height: 1.4;
+}
+
+.tags{
+    margin: 0;
+    font-size: 2em;
+    line-height: 1.4;
+}
+
+.post-body{
+    margin: 27px 20px ;
+    font-size: 20px;
+    font-weight: bold;
+    color: #555;
+}
+
+.post-more{
+    font-size: 15px;
+    border-top: 1px solid #e9eacb;
+}
+
+.post-right{
+    max-width: 270px;
+    width: 100%;
+    float: right;
+    border-bottom: 1px solid;
+}
+
+.tag-title{
+    font-size: 20px;
+    line-height: 30px;
+    margin-top: -5px;
+}
+
+.tag-cloud{
+    padding-bottom: 10px;
+    position: relative;
+    overflow: visible;
+    margin-bottom: 28px;
+}
+
+.tag-cloud a{
+    padding: 3px 3px 4px 4px;
+    line-height: 28px;
+    margin: 0 5px 5px 5px;
+}
+
+.cate-index{
+    padding-bottom: 10px;
+    position: relative;
+    overflow: visible;
+    border-bottom: 1px solid;
+    margin-bottom: 28px;
+}
+
+.post-content{
+    padding: 20px;
+    /*margin-top: -20px;*/
+}
+
+.re-title{
+    margin: 10px 10px;
+    line-height: 10px;
+    font-size: 35px;
+    color: inherit;
+    padding: 20px 0 10px 0;
+}
+
+#tag-info{
+    margin-left: 0;
+    font-size: 1px;
+    line-height: 1.4;
+    border-radius: 0.5em;
+}
+
+#re-more{
+    margin-left: 750px;
+    padding: 15px 10px 20px;
+}
+
+#tag-name{
+    font-size: 5px;
+    margin-left: -2px;
+    border-radius: 0.25em;
+}
+
+#footer-back{
+    background-color: #1a0b2a;
+    border-top:1px solid;
+}
+
+#footer-link{
+    padding-right: 550px;
+}
+
+.at-edit{
+    color: #000;
+    background-color: #fff;
+    max-width: 900px;
+    padding: 10px 15px 10px;
+    margin-bottom: 30px;
+    border-radius: 6px;
+    -webkit-box-shadow: 0 3px 9px rgba(48, 254, 255, 0.9);;
+    box-shadow: 0 0 9px rgba(48, 254, 255, 0.9);;
+}
+
+.edit-title{
+    display: block;
+    width: 100%;
+    font-size: 14px;
+    line-height: 1.42857143;
+    background-color: #fff;
+}
+
+.edit-abstract{
+    padding-top: 10px;
+}
+
+.edit-content{
+    width: 848px;
+    padding-top: 10px;
+}
+
+.edit-category{
+    width: 50%;
+}
+
+.search-highlight{
+    background-color: #3498db;
+    border-color: #3498db;
+}

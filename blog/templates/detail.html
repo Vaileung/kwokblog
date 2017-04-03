@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load custom_markdown %}
+{% block content %}
+<body id="detail-back">
+<div class="container">
+    <div class="row">
+        <div class="col-lg-9">
+            <div id="post-main" class="wrp clear">
+                <div class="post">
+                    <div class="post-title">
+                        <h1 class="title"  style="padding-left: 10px">{{ article.title }}</h1>
+                             <div class="post-meta">
+                                <p>
+                                    <img src="{% static 'images/calendar.png' %}" style="margin-top: -5px;
+                                    margin-left: 5px">&nbsp;&nbsp;
+                                    <span class="pub-date">{{ article.last_modified_time|date:"Y-n-d" }}</span>
+                                    <img src="{% static 'images/category.png' %}" style="margin-top: -5px;
+                            margin-left: 5px">&nbsp;
+                                    <span class="categories">&nbsp;分类:
+                                        <a href="{% url 'blog:category' article.category.pk|default:1 %}">
+                                        {{ article.category }}</a> </span>
+                                    <img src="{% static 'images/labels.png' %}" style="margin-top: -5px;
+                            margin-left: 5px">&nbsp;
+                                    <span class="tags" >&nbsp;标签:&nbsp;
+                                        <span class="tag-name">
+                                            {% for tag in article.tags.all %}
+                                            <a class="label label-default" style="background-color: {{ tag.color }}" href="{% url 'blog:tag' tag.id%}" id="tag-info">{{ tag.name }}</a>&nbsp;
+                                            {% endfor %}
+                                        </span>
+                                    </span>
+                                </p>
+                            </div>
+                    <div class="post-content">{{ article.body |safe}}</div>
+                    {% include "duoshuo.html" %}
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+{% endblock %}

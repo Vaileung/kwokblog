@@ -1,0 +1,104 @@
+{% load staticfiles %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Kwok</title>
+
+      <!--bootstraop引用-->
+    <link rel="stylesheet" href="{% static 'css/tango.css' %}">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+     <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    <script src="{% static 'bootstrap/jquery.min.js' %}"></script>
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'bootstrap/js/bootstrap3-typeahead.min.js' %}"></script>
+    <script src="{% static 'js/blog.js' %}"></script>
+
+
+</head>
+
+<body>
+
+<div class="navbar" id="nav">
+    {% include "nav.html" %}
+</div>
+{% include 'sidebar.html' %}
+{% block content %} {% endblock %}
+
+
+<footer>
+  <div class="modal-footer" id="footer-back">
+      <div class="row" id="footer-link">
+          <p>
+              <a href="#">友情链接1</a>
+              <a href="#">友情链接2</a>
+              <a href="#">友情链接3</a>
+          </p>
+        <div class="copyright">Copyright @2017 By Kwok</div>
+      </div>
+  </div>
+</footer>
+
+{#<div id="tbox">#}
+{#    <a id="gotop" href="javascript:void(0)"></a>#}
+{#</div>#}
+
+</body>
+</html>
+
+{#<script>#}
+{#    $(document).ready(function () {#}
+{#    $('#typeahead-input').typeahead({#}
+{#        source: function (query, process) {#}
+{#            return $.get('/api/article/?format=json&title=' + query, function (data) {#}
+{#                return process(data);#}
+{#            });#}
+{#        },#}
+{#        updater: function (item) {#}
+{#            return item;#}
+{#        },#}
+{#        displayText: function (item) {#}
+{#            return item.title;#}
+{#        },#}
+{#        afterSelect: function (item) {#}
+{#            location.href = 'http://127.0.0.1:8000/blog/' + item.title + ".html";#}
+{#        },#}
+{#        delay: 500#}
+{#    });#}
+{#{);#}
+{#</script>#}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
