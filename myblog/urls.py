@@ -13,6 +13,8 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+from django.contrib import staticfiles
 from django.conf.urls import url, include
 from django.contrib import admin
 from rest_framework.authtoken import views
@@ -34,3 +36,4 @@ urlpatterns = [
     url(r'^search/', include('haystack.urls')),
 ]
 
+urlpatterns += staticfiles_urlpatterns()
