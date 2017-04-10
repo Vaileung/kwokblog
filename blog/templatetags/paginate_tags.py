@@ -1,5 +1,5 @@
 from django import template
-from django.core.paginator import Paginator, PageNotAnInteger,EmptyPage
+from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 
 register = template.Library()
 

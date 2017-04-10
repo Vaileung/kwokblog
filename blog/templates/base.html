@@ -23,9 +23,15 @@
 </head>
 
 <body>
-<div class="navbar" id="nav">
+<div class="jumbotron" id="index">
+  <h1  style="font-size: 40px;color: white">你只是看起来很努力..?</h1>
+  <p>...</p>
+  <p><a class="btn btn-primary btn-lg" href="{% url 'blog:about' %}" role="button">关于我</a></p>
+</div>
+<div class="navbar navbar-inverse" id="nav">
     {% include "nav.html" %}
 </div>
+
 {% include 'sidebar.html' %}
 {% block content %} {% endblock %}
 
@@ -34,11 +40,11 @@
   <div class="modal-footer" id="footer-back">
       <div class="row" id="footer-link">
           <p>
-              <a href="#">友情链接1</a>
-              <a href="#">友情链接2</a>
-              <a href="#">友情链接3</a>
+              <a href="{% url 'blog:index' %}">首页</a>
+              <a href="https://www.zhihu.com/people/guo-wei-liang-48/">知乎</a>
+              <a href="https://github.com/Kwokwai">Github</a>
           </p>
-        <div class="copyright">Copyright @2017 By Kwok</div>
+        <div class="copyright" >Copyright @2017 By Kwok</div>
       </div>
   </div>
 </footer>

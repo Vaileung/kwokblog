@@ -12,5 +12,6 @@ urlpatterns = [
     url(r'^archive/(?P<year>\d+)/(?P<month>\d+)$', views.ArchiveView.as_view(), name='archive'),
     url(r'^edit/', views.EditarticleView.as_view(), name='edit'),
     url(r'^search/', search_views.MySearchView(), name='haystack_search'),
+    url(r'^about/', views.AboutView.as_view(), name='about')
 ]
 

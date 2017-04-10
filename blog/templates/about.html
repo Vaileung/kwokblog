@@ -1,4 +1,28 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block content %}
-
+<div class="container">
+    <div class="row">
+        <div class="col-lg-9" >
+            <div class="well">
+                <p style="margin-left: 360px;font-size: 35px">主人</p>
+            </div>
+            <div class="well">
+                <img src="{% static 'images/star.jpg' %}" class="img-circle" style="width: 100px;height: 100px;margin-left: 345px">
+                <p style="font-size: 30px;margin-left: 340px;margin-top: 10px">Mr.Kwok</p>
+                <p style="margin-left: 325px;font-size: 15px">人生苦短,我用Python.</p>
+                <p style="margin-left: 320px;font-size: 15px">在编程的路上,虚心前进.</p>
+                <p style="margin-left: 335px;font-size: 15px">安安静静地写代码.</p>
+                <p style="margin-left: 355px">
+                <a href="https://www.zhihu.com/people/guo-wei-liang-48/">
+                    <img src="{% static 'images/zhihu.svg' %}"  >&nbsp;&nbsp;&nbsp;&nbsp;
+                </a>
+                <a href="https://github.com/Kwokwai" >
+                    <img src="{% static 'images/GitHub.svg' %}">
+                </a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}

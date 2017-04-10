@@ -115,3 +115,12 @@ class EditarticleView(FormView):
         form.save()
         return super(EditarticleView, self).form_valid(form)
 
+
+class AboutView(IndexView):
+    template_name = 'about.html'
+
+    def get_context_data(self, **kwargs):
+        kwargs['category_list'] = Category.objects.all().order_by('name')
+        kwargs['date_archive'] = Article.objects.archive()
+        kwargs['tag_list'] = Tag.objects.all().order_by('name')
+        return super(AboutView, self).get_context_data(**kwargs)

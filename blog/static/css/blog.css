@@ -6,6 +6,7 @@ html, body{
     vertical-align: baseline;
     line-height: 1;
     background-image: url('../images/back.jpg');
+    /*height: 100%;*/
 }
 
 body{
@@ -13,7 +14,10 @@ body{
     padding: 0;
     font: 12px 'Microsoft Yahei', '微软雅黑', 'simsun', Arial, sans-self;
     min-width: 960px;
+    height: 100%;
 }
+
+
 
 .noselect {
     -webkit-touch-callout: none;
@@ -49,8 +53,17 @@ a {
     margin-top: -5px;
 }
 
+#index{
+    background-image: url('../images/index.png')
+}
+
 #detail-back{
     background-image: url('../images/detailback.jpg')
+}
+
+#nav{
+    margin-top: -30px;
+    background-color: #1a0b2a;
 }
 
 .post{
@@ -180,6 +193,7 @@ a {
 #footer-back{
     background-color: #1a0b2a;
     border-top:1px solid;
+    font-size: 22px;
 }
 
 #footer-link{
